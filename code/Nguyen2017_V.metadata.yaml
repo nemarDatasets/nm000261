@@ -1,0 +1,144 @@
+_dataset:
+  class: Nguyen2017_V
+  code: Nguyen2017-V
+  doi: 10.1088/1741-2552/aa8235
+  interval:
+  - 0
+  - 1.5
+  n_subjects: 8
+  paradigm: imagery
+acquisition:
+  channel_types:
+    eeg: 60
+    eog: 4
+  filters:
+    highpass: 8.0
+    lowpass: 70.0
+    notch_hz: 60.0
+  hardware: BrainProducts ActiCHamp
+  line_freq: 60.0
+  montage: standard_1020
+  n_channels: 64
+  sampling_rate: 256.0
+  sensor_type: EEG
+cross_validation:
+  cv_folds: 10
+  cv_method: 10-fold
+  evaluation_type:
+  - within_session
+data_processed: true
+data_structure:
+  n_trials: 7200
+  n_trials_per_class:
+    vowel_a: 2400
+    vowel_i: 2400
+    vowel_u: 2400
+  trials_context: 8 subjects x 300 trials (100 per class), each split into 3 epochs. T=1.0 s.
+documentation:
+  associated_paper_doi: 10.1088/1741-2552/aa8235
+  contact_info:
+  - chuong.h.nguyen@asu.edu
+  - panagiotis.artemiadis@asu.edu
+  country: US
+  data_url: https://zenodo.org/records/19502794
+  description: Imagined speech EEG dataset. Paper reports 49.0+/-2.4% mean accuracy.
+  doi: 10.1088/1741-2552/aa8235
+  institution: Arizona State University
+  institution_address: Tempe, AZ 85287, USA
+  institution_department: School for Engineering of Matter, Transport and Energy
+  investigators:
+  - Chuong H. Nguyen
+  - George K. Karavas
+  - Panagiotis Artemiadis
+  keywords:
+  - imagined speech
+  - EEG
+  - Riemannian manifold
+  - covariance matrix
+  - relevance vector machines
+  - brain-computer interface
+  - vowels
+  license: other-open
+  publication_year: 2018
+  repository: Zenodo
+  senior_author: Panagiotis Artemiadis
+experiment:
+  class_labels:
+  - vowel_a
+  - vowel_i
+  - vowel_u
+  events:
+    vowel_a: 1
+    vowel_i: 2
+    vowel_u: 3
+  hed_tags:
+    vowel_a: (Sensory-event, Experimental-stimulus, Auditory-presentation, Visual-presentation), (Agent-action, (Imagine,
+      Speak, (Phoneme, (Label/a))))
+    vowel_i: (Sensory-event, Experimental-stimulus, Auditory-presentation, Visual-presentation), (Agent-action, (Imagine,
+      Speak, (Phoneme, (Label/i))))
+    vowel_u: (Sensory-event, Experimental-stimulus, Auditory-presentation, Visual-presentation), (Agent-action, (Imagine,
+      Speak, (Phoneme, (Label/u))))
+  mode: offline
+  n_classes: 3
+  paradigm: imagery
+  primary_modality: auditory
+  stimulus_modalities:
+  - auditory
+  - visual
+  stimulus_type: auditory + visual cue
+  study_design: 'Auditory beep + visual cue. 5 beeps at T=1.0s rhythm. Subject imagines speech at each beep and continues
+    for 3 more periods. Analyzed segment: after last beep. Each 5s trial is split into 3 overlapping epochs of 2s.'
+  synchronicity: synchronous
+  trial_duration: 2.0
+file_format: MAT
+paradigm_specific:
+  cue_duration_s: 7.0
+  detected_paradigm: motor_imagery
+  imagery_duration_s: 5.0
+  imagery_tasks:
+  - vowel_a
+  - vowel_i
+  - vowel_u
+participants:
+  age_max: 32
+  age_min: 22
+  health_status: healthy
+  n_subjects: 8
+  species: human
+preprocessing:
+  data_state: preprocessed
+  highpass_hz: 8.0
+  lowpass_hz: 70.0
+  notch_hz: 60.0
+  preprocessing_applied: true
+  preprocessing_steps:
+  - Bandpass 8-70 Hz (5th order Butterworth)
+  - 60 Hz notch filter (to remove line noise)
+  - EOG artifact removal (adaptive filtering)
+  - Downsampled from 1000 Hz to 256 Hz
+runs_per_session: 1
+sessions_per_subject: 1
+signal_processing:
+  classifiers:
+  - mRVM
+  feature_extraction:
+  - Riemannian tangent space
+  frequency_bands:
+    beta:
+    - 13.0
+    - 30.0
+    gamma:
+    - 30.0
+    - 70.0
+    mu:
+    - 8.0
+    - 13.0
+  spatial_filters:
+  - CSP
+tags:
+  modality:
+  - Speech
+  pathology:
+  - Healthy
+  type:
+  - Research
