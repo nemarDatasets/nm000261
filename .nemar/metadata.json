@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "validated",
   "title": "Imagined speech EEG dataset — vowels condition (Nguyen et al. 2017)",
-  "description": "This dataset comprises preprocessed EEG recordings from 8 healthy subjects performing imagined speech tasks involving three vowel phonemes (a, i, u). Subjects received auditory and visual cues to imagine speaking each vowel, with 64-channel EEG data sampled at 256 Hz and analyzed using Riemannian manifold-based feature extraction and relevance vector machine classification. The dataset includes 7,200 trials (2,400 per vowel class) and has been preprocessed with bandpass filtering, notch filtering, and artifact removal.",
-  "methods_description": "EEG data were acquired using a 64-channel BrainProducts ActiCHamp system (60 EEG channels, 4 EOG channels) at 256 Hz sampling rate with standard 10-20 montage. Preprocessing included 5th-order Butterworth bandpass filtering (8-70 Hz), 60 Hz notch filtering, adaptive EOG artifact removal, and downsampling from 1000 Hz to 256 Hz. Feature extraction employed Riemannian tangent space mapping with common spatial pattern spatial filtering across mu (8-13 Hz), beta (13-30 Hz), and gamma (30-70 Hz) frequency bands.",
+  "description": "This dataset comprises preprocessed EEG recordings from 8 healthy subjects performing imagined speech tasks involving three vowel phonemes (a, i, u). Participants received auditory and visual cues to imagine speaking each vowel, with 64-channel EEG data acquired at 256 Hz. The dataset includes 2,400 base trials (8 subjects × 300 trials per subject) with 3 overlapping 2-second epochs extracted per trial, yielding 7,200 total epochs, analyzed using Riemannian manifold-based feature extraction and relevance vector machine classification for brain-computer interface applications. This is a MOABB (Mother of All BCI Benchmarks) benchmark collection dataset converted to BIDS format.",
+  "methods_description": "EEG data were acquired using a BrainProducts ActiCHamp system with 64 channels (60 EEG, 4 EOG) at 256 Hz sampling rate using a standard 10-20 montage. The experimental paradigm consisted of auditory beeps at 1.0 s intervals with visual cues, during which subjects imagined speaking designated vowels. Preprocessing included bandpass filtering (8-70 Hz, 5th order Butterworth), 60 Hz notch filtering, and adaptive EOG artifact removal. Feature extraction employed Riemannian tangent space mapping with common spatial pattern spatial filtering across mu (8-13 Hz), beta (13-30 Hz), and gamma (30-70 Hz) frequency bands.",
   "license": "other-open",
   "dataset_type": "derivative",
   "authors": {
@@ -31,7 +31,10 @@
       "term": "covariance matrix"
     },
     {
-      "term": "vowel classification"
+      "term": "vowels"
+    },
+    {
+      "term": "relevance vector machines"
     }
   ],
   "related_identifiers": [
@@ -77,5 +80,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "55f4623c71170ec93fbc08eed79b426f29419f2b814ec3ecb510fdd415c35a7f"
+  "source_hash": "a7d5941380d4de2790c0a1cab1ba491af65eb2edd5d22425cbe6a8cf43499e80"
 }
