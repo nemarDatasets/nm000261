@@ -1,0 +1,55 @@
+{
+ "dataset": "nm000261",
+ "moabb_class": "Nguyen2017_V",
+ "moabb_version_used": "1.5.0dev0",
+ "retrieved": "2026-08-13",
+ "retrieved_by": "moabb.datasets.Nguyen2017_V.data_path()",
+ "upstream_cache_root": "/expanse/lustre/scratch/bpinto/temp_project/sourcedata_staging/mne_data/MNE-nguyen2017v-data/Vowels",
+ "license": "other-open",
+ "doi": "10.1088/1741-2552/aa8235",
+ "naming": "upstream_filenames_restored",
+ "n_files": 8,
+ "total_bytes": 2239293299,
+ "files": [
+  {
+   "file": "sub-01.mat",
+   "bytes": 329944449,
+   "sha256": "b3af2b80196f959c3e0ff0a4dd4ee483413df717298b235a887875ade4fa658a"
+  },
+  {
+   "file": "sub-02.mat",
+   "bytes": 329665841,
+   "sha256": "6a7d51ee49ed6ed05273ba03b294ebf0034103b01e2d9d0550c8099e0f9edde0"
+  },
+  {
+   "file": "sub-03.mat",
+   "bytes": 263695326,
+   "sha256": "a55a59261c49a88ae0ccbeabd60993b01530a334024cf9655e5c4f46d8cd7f61"
+  },
+  {
+   "file": "sub-04.mat",
+   "bytes": 263444997,
+   "sha256": "df5bed3e2f586bea9413f346cd5ead24c10c8c9efd63be0a41d807c2ce6d1b25"
+  },
+  {
+   "file": "sub-05.mat",
+   "bytes": 263218473,
+   "sha256": "b41b7f720f563ad0109d004d831ad4ea202ab771ef938f2c36430a893cbb889a"
+  },
+  {
+   "file": "sub-06.mat",
+   "bytes": 263386613,
+   "sha256": "7ba62da69d1c6991657986086d0cf85498603dc497fa21e801687d4965c7d557"
+  },
+  {
+   "file": "sub-07.mat",
+   "bytes": 262799801,
+   "sha256": "0aee8ac6876442463b81d4fab03a576b8be2b1b342f73e20df3b59ce84ee4559"
+  },
+  {
+   "file": "sub-08.mat",
+   "bytes": 263137799,
+   "sha256": "6e47643002d67c62fdcef68dbe0e9d30eb3096fa4dde610bd339352c0aa7b49b"
+  }
+ ]
+}
