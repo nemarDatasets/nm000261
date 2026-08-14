@@ -1,8 +1,8 @@
 {
   "version": "2.0",
-  "pipeline_stage": "validated",
+  "pipeline_stage": "enriched",
   "title": "Imagined speech EEG dataset — vowels condition (Nguyen et al. 2017)",
-  "description": "This dataset comprises preprocessed EEG recordings from 8 healthy subjects performing imagined speech tasks involving three vowel phonemes (a, i, u). Participants received auditory and visual cues to imagine speaking each vowel, with 64-channel EEG data acquired at 256 Hz. The dataset includes 2,400 base trials (8 subjects × 300 trials per subject) with 3 overlapping 2-second epochs extracted per trial, yielding 7,200 total epochs, analyzed using Riemannian manifold-based feature extraction and relevance vector machine classification for brain-computer interface applications. This is a MOABB (Mother of All BCI Benchmarks) benchmark collection dataset converted to BIDS format.",
+  "description": "This dataset comprises preprocessed EEG recordings from 8 healthy subjects performing imagined speech tasks involving three vowel phonemes (a, i, u). Participants received auditory and visual cues to imagine speaking each vowel, with 64-channel EEG data acquired at 256 Hz. The dataset includes 2,400 trials (8 subjects × 300 trials each; note: 7,200 overlapping 2-second epochs derived from these trials) analyzed using Riemannian manifold-based feature extraction and relevance vector machine classification for brain-computer interface applications, achieving approximately 49% mean accuracy across a 10-fold cross-validation scheme.",
   "methods_description": "EEG data were acquired using a BrainProducts ActiCHamp system with 64 channels (60 EEG, 4 EOG) at 256 Hz sampling rate using a standard 10-20 montage. The experimental paradigm consisted of auditory beeps at 1.0 s intervals with visual cues, during which subjects imagined speaking designated vowels. Preprocessing included bandpass filtering (8-70 Hz, 5th order Butterworth), 60 Hz notch filtering, and adaptive EOG artifact removal. Feature extraction employed Riemannian tangent space mapping with common spatial pattern spatial filtering across mu (8-13 Hz), beta (13-30 Hz), and gamma (30-70 Hz) frequency bands.",
   "license": "other-open",
   "dataset_type": "derivative",
@@ -31,10 +31,10 @@
       "term": "covariance matrix"
     },
     {
-      "term": "vowels"
+      "term": "relevance vector machines"
     },
     {
-      "term": "relevance vector machines"
+      "term": "vowels"
     }
   ],
   "related_identifiers": [
@@ -49,11 +49,6 @@
       "relation_type": "IsDescribedBy"
     },
     {
-      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=nm000261",
-      "identifier_type": "URL",
-      "relation_type": "IsDescribedBy"
-    },
-    {
       "identifier": "10.21105/joss.01896",
       "identifier_type": "DOI",
       "relation_type": "References"
@@ -62,6 +57,11 @@
       "identifier": "10.1038/s41597-019-0104-8",
       "identifier_type": "DOI",
       "relation_type": "References"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000261",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
     }
   ],
   "resource_type_general": "Dataset",
@@ -70,15 +70,16 @@
     "eeg"
   ],
   "sizes": [
-    "529.3 MB (9 files)"
+    "2.8 GB (17 files)"
   ],
   "formats": [
     ".edf",
     ".json",
+    ".mat",
     ".md",
     ".tsv",
     ".yaml",
     ".yml"
   ],
-  "source_hash": "a7d5941380d4de2790c0a1cab1ba491af65eb2edd5d22425cbe6a8cf43499e80"
+  "source_hash": "1380920e8a8d799b409fb457336e42a5e2fb518b8b6e9591f2c1d672d359dd9e"
 }
