@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "Imagined speech EEG dataset — vowels condition (Nguyen et al. 2017)",
-  "description": "This dataset comprises preprocessed EEG recordings from 8 healthy subjects performing imagined speech tasks involving three vowel phonemes (a, i, u). Participants received auditory and visual cues to imagine speaking each vowel, with 64-channel EEG data acquired at 256 Hz. The dataset includes 2,400 trials (8 subjects × 300 trials each; note: 7,200 overlapping 2-second epochs derived from these trials) analyzed using Riemannian manifold-based feature extraction and relevance vector machine classification for brain-computer interface applications, achieving approximately 49% mean accuracy across a 10-fold cross-validation scheme.",
-  "methods_description": "EEG data were acquired using a BrainProducts ActiCHamp system with 64 channels (60 EEG, 4 EOG) at 256 Hz sampling rate using a standard 10-20 montage. The experimental paradigm consisted of auditory beeps at 1.0 s intervals with visual cues, during which subjects imagined speaking designated vowels. Preprocessing included bandpass filtering (8-70 Hz, 5th order Butterworth), 60 Hz notch filtering, and adaptive EOG artifact removal. Feature extraction employed Riemannian tangent space mapping with common spatial pattern spatial filtering across mu (8-13 Hz), beta (13-30 Hz), and gamma (30-70 Hz) frequency bands.",
+  "description": "This dataset comprises preprocessed EEG recordings from 8 healthy subjects performing imagined speech tasks involving three vowel phonemes (a, i, u). Participants received auditory and visual cues to imagine speaking each vowel, with 64-channel EEG data acquired at 256 Hz. The dataset includes 2,400 trials generating 7,200 overlapping 2-second epochs (8 subjects × 300 trials × 3 overlapping epochs per trial) analyzed using Riemannian manifold-based feature extraction and relevance vector machine classification for brain-computer interface applications, achieving approximately 49% mean accuracy across a 10-fold cross-validation scheme.",
+  "methods_description": "EEG data were acquired using a BrainProducts ActiCHamp system with 64 channels (60 EEG, 4 EOG) at 256 Hz sampling rate using a standard 10-20 montage. The experimental paradigm consisted of auditory beeps at 1.0 s intervals with visual cues, during which subjects imagined speaking designated vowels. Preprocessing included bandpass filtering (8-70 Hz, 5th order Butterworth), 60 Hz notch filtering, and adaptive EOG artifact removal. Feature extraction employed Riemannian tangent space mapping with common spatial pattern spatial filtering across mu (8-13 Hz), beta (13-30 Hz), and gamma (30-70 Hz) frequency bands. Classification performance was evaluated using a 10-fold cross-validation scheme with relevance vector machines, achieving approximately 49% mean accuracy.",
   "license": "other-open",
   "dataset_type": "derivative",
   "authors": {
@@ -31,10 +31,10 @@
       "term": "covariance matrix"
     },
     {
-      "term": "relevance vector machines"
+      "term": "vowels"
     },
     {
-      "term": "vowels"
+      "term": "relevance vector machines"
     }
   ],
   "related_identifiers": [
@@ -81,5 +81,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "1380920e8a8d799b409fb457336e42a5e2fb518b8b6e9591f2c1d672d359dd9e"
+  "source_hash": "909fd8b8b6333cd18cba4b7f323f7366d2f3acb08cfb82304c98e91290288052"
 }
