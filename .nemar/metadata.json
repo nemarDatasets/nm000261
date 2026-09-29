@@ -2,8 +2,8 @@
   "version": "2.0",
   "pipeline_stage": "enriched",
   "title": "Imagined speech EEG dataset — vowels condition (Nguyen et al. 2017)",
-  "description": "This dataset comprises preprocessed EEG recordings from 8 healthy subjects performing imagined speech tasks involving three vowel phonemes (a, i, u). Participants received auditory and visual cues to imagine speaking each vowel, with 64-channel EEG data acquired at 256 Hz. The dataset includes 2,400 trials generating 7,200 overlapping 2-second epochs (8 subjects × 300 trials × 3 overlapping epochs per trial) analyzed using Riemannian manifold-based feature extraction and relevance vector machine classification for brain-computer interface applications, achieving approximately 49% mean accuracy across a 10-fold cross-validation scheme.",
-  "methods_description": "EEG data were acquired using a BrainProducts ActiCHamp system with 64 channels (60 EEG, 4 EOG) at 256 Hz sampling rate using a standard 10-20 montage. The experimental paradigm consisted of auditory beeps at 1.0 s intervals with visual cues, during which subjects imagined speaking designated vowels. Preprocessing included bandpass filtering (8-70 Hz, 5th order Butterworth), 60 Hz notch filtering, and adaptive EOG artifact removal. Feature extraction employed Riemannian tangent space mapping with common spatial pattern spatial filtering across mu (8-13 Hz), beta (13-30 Hz), and gamma (30-70 Hz) frequency bands. Classification performance was evaluated using a 10-fold cross-validation scheme with relevance vector machines, achieving approximately 49% mean accuracy.",
+  "description": "Preprocessed 64-channel EEG recordings from 8 healthy participants performing imagined speech of three vowel phonemes (a, i, u) in response to auditory and visual cues. The dataset was re-packaged in BIDS format from the MOABB collection and supports decoding of imagined speech with Riemannian manifold features and relevance vector machine classification.",
+  "methods_description": "EEG was acquired with a BrainProducts ActiCHamp system (64 channels: 60 EEG, 4 EOG) at 256 Hz using a 10-20 montage. Participants imagined speaking vowels following auditory beeps at 1 s intervals with visual cues. Preprocessing comprised 8-70 Hz Butterworth bandpass filtering, a 60 Hz notch filter, and adaptive EOG artifact removal. Features were extracted using Riemannian tangent space mapping with CSP spatial filtering across mu, beta and gamma bands.",
   "license": "other-open",
   "dataset_type": "derivative",
   "authors": {
@@ -13,16 +13,20 @@
   },
   "keywords": [
     {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+    },
+    {
       "term": "imagined speech"
     },
     {
-      "term": "EEG"
-    },
-    {
-      "term": "brain-computer interface"
-    },
-    {
-      "term": "motor imagery"
+      "term": "vowels"
     },
     {
       "term": "Riemannian manifold"
@@ -31,10 +35,7 @@
       "term": "covariance matrix"
     },
     {
-      "term": "vowels"
-    },
-    {
-      "term": "relevance vector machines"
+      "term": "relevance vector machine"
     }
   ],
   "related_identifiers": [
@@ -49,16 +50,6 @@
       "relation_type": "IsDescribedBy"
     },
     {
-      "identifier": "10.21105/joss.01896",
-      "identifier_type": "DOI",
-      "relation_type": "References"
-    },
-    {
-      "identifier": "10.1038/s41597-019-0104-8",
-      "identifier_type": "DOI",
-      "relation_type": "References"
-    },
-    {
       "identifier": "https://nemar.org/dataset/nm000261",
       "identifier_type": "URL",
       "relation_type": "IsDescribedBy"
@@ -70,7 +61,7 @@
     "eeg"
   ],
   "sizes": [
-    "2.8 GB (17 files)"
+    "2.58 GB (17 files)"
   ],
   "formats": [
     ".edf",
